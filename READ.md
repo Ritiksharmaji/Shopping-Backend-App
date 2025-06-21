@@ -63,3 +63,13 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 6) created the rating.controller.js
 7) created the review.controller.js
 8) created the middle ware:authenticat.js
+
+## branch_3_creating_outes
+1) created adminOrder.routes.js
+2) created cartItem.routes.js
+3) created cartItem.routes.js
+4) created order.routes.js
+5) created product.admin.routes.js
+6) created rating.routes.js
+7) created rating.routes.js
+8) 
