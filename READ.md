@@ -54,4 +54,12 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 14) ![alt text](image-10.png)
 15) ![alt text](image-11.png)
 
-## 
+## branch_2_creating_the_controller
+1) created the adminOrder.controller.js
+2) cart.controller.js
+3) created the cartItem.controller.js
+4) created the order.controller.js
+5) created the product.controller.js
+6) created the rating.controller.js
+7) created the review.controller.js
+8) created the middle ware:authenticat.js
