@@ -73,7 +73,6 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 6) created rating.routes.js
 7) created rating.routes.js
 8) 
-
 ## branch_4_testing_Postmain 
 1) sign-up a user: http://localhost:5454/auth/signin
 2) sing-in a user: http://localhost:5454/auth/signin
@@ -90,4 +89,3 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 12) find-product-by-id: http://localhost:5454/api/products/id/68574d2cb73ca0883311c705
 
 13) get-all-product: http://localhost:5454/api/products?color=white
-
