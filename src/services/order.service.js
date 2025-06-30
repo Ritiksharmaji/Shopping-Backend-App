@@ -4,14 +4,21 @@ const OrderItem = require("../models/orderItems.js");
 const cartService = require("../services/cart.service.js");
 
 async function createOrder(user, shippAddress) {
+  console.log(`request in the createOrder function with params`,user,shippAddress);
   let address;
   if (shippAddress._id) {
+    console.log(`shippAddress already there`,shippAddress);
     let existedAddress = await Address.findById(shippAddress._id);
     address = existedAddress;
   } else {
+    console.log(`new shippAddress created`,shippAddress);
     address = new Address(shippAddress);
+    console.log(`address:`,address);
+    console.log(`user of address:`,address.user)
     address.user = user;
+     console.log(`user of address:`,address.user)
     await address.save();
+    console.log("User Addresses",user.address);
 
     user.addresses.push(address);
     await user.save();

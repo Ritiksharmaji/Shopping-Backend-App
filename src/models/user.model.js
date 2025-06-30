@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         
     },
-    address:[{
+    addresses:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"addresses"
     }],

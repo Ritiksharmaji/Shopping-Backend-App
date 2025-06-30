@@ -78,8 +78,10 @@ async function searchProduct(req, res) {
 
 // Get all products with filtering and pagination
 async function getAllProducts(req, res) {
+  console.log("getAllProducts called with query:", req.query);
   try {
 
+    console.log("Incoming query params:", req.query);
     const products = await productService.getAllProducts(req.query);
 
     return res.status(200).send(products);

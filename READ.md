@@ -64,7 +64,7 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 7) created the review.controller.js
 8) created the middle ware:authenticat.js
 
-## branch_3_creating_outes
+## branch_3_creating_routes
 1) created adminOrder.routes.js
 2) created cartItem.routes.js
 3) created cartItem.routes.js
@@ -73,3 +73,19 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 6) created rating.routes.js
 7) created rating.routes.js
 8) 
+## branch_4_testing_Postmain 
+1) sign-up a user: http://localhost:5454/auth/signin
+2) sing-in a user: http://localhost:5454/auth/signin
+3) profile: http://localhost:5454/api/users/profile
+4) create-a product: http://localhost:5454/api/admin/products/ => after that get the id of 5) created product (_id: 68574d2cb73ca0883311c705)
+6) get a cart: http://localhost:5454/api/cart/
+7) add-item-to-cart: http://localhost:5454/api/cart/add
+8) get a cart: http://localhost:5454/api/cart/
+9) create a order:http://localhost:5454/api/orders/
+10) remove a cart Item: (for that we need to pass the _id of cartItems which is avaialbe in the cart details for that we need to get the cart in that cartItems will be there from there copy the _id and hit it in the remove cart item url): http://localhost:5454/api/cart_items/68574dbbb73ca0883311c714
+
+11) update cartItem: http://localhost:5454/api/cart_items/68575c5ee5a7b190be909599
+
+12) find-product-by-id: http://localhost:5454/api/products/id/68574d2cb73ca0883311c705
+
+13) get-all-product: http://localhost:5454/api/products?color=white
