@@ -20,8 +20,10 @@ async function createCartItem(cartItemData) {
 
 // Update an existing cart item
 async function updateCartItem(userId, cartItemId, cartItemData) {
+  console.log(`request pramas in updateCartItem: userID:${userId} and 
+    cartItemId:${cartItemId} and cartItemData:${JSON.stringify(cartItemData)}`)
   try {
-    const item = await findCartItemById(cartItemId);
+    const item = (await findCartItemById(cartItemId));
     console.log("cartItemData ", item);
 
     if (!item) {
@@ -29,6 +31,7 @@ async function updateCartItem(userId, cartItemId, cartItemData) {
     }
 
     const user = await userService.findUserById(item.userId);
+    console.log(`item user:`,user);
 
     if (!user) {
       throw new Error("User not found: " + userId);
@@ -49,6 +52,41 @@ async function updateCartItem(userId, cartItemId, cartItemData) {
     throw new Error(error.message);
   }
 }
+
+// async function updateCartItem(userId, cartItemId, cartItemData) {
+//   console.log(`Request params: userId: ${userId}, cartItemId: ${cartItemId}, cartItemData: ${JSON.stringify(cartItemData)}`);
+  
+//   try {
+//     const item = await findCartItemById(cartItemId);
+//     console.log("Cart item found:", item);
+
+//     if (!item.userId) {
+//       throw new Error("CartItem is missing userId field");
+//     }
+
+//     const user = await userService.findUserById(item.userId);
+//     console.log("User found for cart item:", user);
+
+//     if (!user) {
+//       throw new Error("User not found: " + userId);
+//     }
+
+//     if (user._id.toString() === userId.toString()) {
+//       item.quantity = cartItemData.quantity;
+//       item.price = item.quantity * item.product.price;
+//       item.discountedPrice = item.quantity * item.product.discountedPrice;
+
+//       const updatedCartItem = await item.save();
+//       return updatedCartItem;
+//     } else {
+//       throw new Error("You can't update another user's cart item");
+//     }
+//   } catch (error) {
+//     console.error("Error updating cart item:", error);
+//     throw new Error(error.message);
+//   }
+// }
+
 
 // Check if a cart item already exists in the user's cart
 async function isCartItemExist(cart, product, size, userId) {
@@ -83,8 +121,8 @@ async function removeCartItem(userId, cartItemId) {
 // Find a cart item by its ID
 async function findCartItemById(cartItemId) {
   try {
-    //const cartItem = await CartItem.findById(cartItemId).populate("product");
-    const cartItem = await CartItem.findById(cartItemId);
+    const cartItem = await CartItem.findById(cartItemId).populate("product");
+    //const cartItem = await CartItem.findById(cartItemId);
 
     if (cartItem) {
       return cartItem;

@@ -5,6 +5,7 @@ const cartService=require("../services/cart.service.js")
 
 
 const register=async(req,res)=>{
+    console.log("regisration request received",req.body);
 
     try {
         const user=await userService.createUser(req.body);
