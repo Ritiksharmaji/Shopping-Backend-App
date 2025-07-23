@@ -73,7 +73,6 @@ Replace `your-entry-file.js` with your actual entry file, e.g., `index.js`, `ser
 6) created rating.routes.js
 7) created rating.routes.js
 8) 
-
 ## branch_4_testing_Postmain 
 1) sign-up a user: http://localhost:5454/auth/signin
 2) sing-in a user: http://localhost:5454/auth/signin
