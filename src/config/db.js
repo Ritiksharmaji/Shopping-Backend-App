@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mondbUrl = "mongodb+srv://ritiksharma555598:ritiksharma555598@cluster0.rik7b7h.mongodb.net/"
+const mondbUrl = "mongodb+srv://ritiksharma555598:mongodb620@cluster0.km1ez.mongodb.net/?appName=Cluster0"
 
 const connectDb = ()=>{
     console.log("connectDb called");
