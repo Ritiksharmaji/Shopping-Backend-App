@@ -19,7 +19,7 @@ const createPaymentLink = async (orderId) => {
         email: true,
       },
       reminder_enable: true,
-      callback_url: `http://localhost:5173/payment/${orderId}`, // Redirect after payment
+      callback_url: `http://localhost:5173/payment/${orderId}`, // Redirect after payment this is the  frontend url where we will handle the payment status and show the user the appropriate message
       callback_method: 'get',
     };
 
